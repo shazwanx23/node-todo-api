@@ -30,7 +30,7 @@ app.get('/todos', (req, res) => {
   });
 });
 
-// GET /todos/213123
+
 app.get('/todos/:id', (req, res) => {
   var id =  req.params.id;
 
@@ -47,13 +47,6 @@ app.get('/todos/:id', (req, res) => {
   }).catch((e) => {
     res.status(400).send();
   });
-  //findbyid
-  //success
-    // if todo, send
-    //if no todo - send back 404, empty body
-  //error
-    //send back 400 - send nothing
-
 });
 
 app.listen(3000, () => {
